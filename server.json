@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.tencent-lexiang/mcp-server",
+  "name": "io.github.ajaxhe/lexiang-mcp-server",
   "title": "Tencent Lexiang MCP Server",
-  "description": "Tencent Lexiang is an AI-powered enterprise knowledge base. This MCP server enables AI assistants to search knowledge bases, manage entries, edit documents, and handle file uploads/downloads. Features include multi-source knowledge aggregation (WeChat files, WeChat Official Account articles, Tencent Meeting, Tencent Docs), intelligent Q&A with AI chat, and enterprise-grade security.",
+  "description": "Tencent Lexiang AI knowledge base MCP server for searching, managing entries, and editing docs.",
   "version": "1.0.0",
   "repository": {
     "url": "https://github.com/tencent-lexiang/lexiang-mcp-server",
@@ -11,15 +11,14 @@
   "websiteUrl": "https://lexiang.tencent.com",
   "remotes": [
     {
-      "transportType": "streamable-http",
+      "type": "streamable-http",
       "url": "https://mcp.lexiang-app.com/mcp?company_from={company_code}",
-      "variables": [
-        {
-          "name": "company_code",
+      "variables": {
+        "company_code": {
           "description": "Your enterprise's Lexiang code (obtain from https://lexiangla.com/mcp after login)",
           "required": true
         }
-      ]
+      }
     }
   ]
 }
