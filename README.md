@@ -53,75 +53,88 @@ MCP 服务支持 **2 种认证方式**：
 
 > **推荐方案**：使用方式 1（OAuth 登录），无需创建会话，最快最简便。
 
-#### 第一步：获取 MCP 配置信息
+#### 快速开始（推荐 OAuth 方式）
+
+**最快的方式（只需 2 步）：**
 
 1. 登录乐享后，访问 [https://lexiangla.com/mcp](https://lexiangla.com/mcp)
-2. 页面会显示您的专属 MCP Server 配置信息：
+2. 点击页面上的 **"在 Cursor 中打开"** 或 **"在 VS Code 中打开"** 按钮
+3. 在跳转的登录页面中完成身份验证
+
+配置会自动导入，无需手动复制粘贴！
+
+#### 手动配置方式（Token 方式）
+
+如果需要手动配置，请按以下步骤操作：
+
+1. 访问 [https://lexiangla.com/mcp](https://lexiangla.com/mcp)
+2. 切换到 **"会话管理"** 标签页
+3. 点击 **"新建会话"** 获得 `access_token`
+4. 根据您的客户端类型，选择对应的配置方式：
+
+---
+
+##### Cursor / Cline / CodeBuddy 配置
+
+编辑配置文件（支持 Remote URL OAuth）：
+
+**配置文件位置：**
+- Cursor：`.cursor/mcp.json`
+- Cline：`.cline/mcp.json`  
+- CodeBuddy：`.codebuddy/mcp.json` 或 `~/.codebuddy/mcp.json`
 
 ```json
 {
   "mcpServers": {
     "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}"
+      "url": "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}&access_token={您的access_token}"
     }
   }
 }
 ```
 
-> **说明**：`{您的乐享code}` 是您企业的唯一标识，从配置页面直接复制即可。
+---
 
-#### 第二步：配置 AI 客户端
+##### VS Code 配置 (settings.json)
 
-##### CodeBuddy（推荐）
+编辑 VS Code 的 `settings.json`：
 
-1. 打开 CodeBuddy，进入 MCP 配置
-2. 添加乐享 MCP 配置信息（从第一步复制）
-3. 点击「刷新」图标
-4. 在弹窗中完成乐享 MCP Server **OAuth 授权**
+```json
+{
+  "mcp": {
+    "servers": {
+      "lexiang": {
+        "url": "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}&access_token={您的access_token}"
+      }
+    }
+  }
+}
+```
 
-配置文件位置：
-- 项目级配置：`.codebuddy/mcp.json`
-- 全局配置：`~/.codebuddy/mcp.json`
+---
+
+##### CodeBuddy 插件版 / Codebuddy Code 配置（需 npx）
+
+> ⚠️ CodeBuddy 插件版和 Codebuddy Code 暂不支持 Remote URL OAuth 方式，需要通过 `npx mcp-remote` 桥接。请确保已安装 Node.js 环境。
 
 ```json
 {
   "mcpServers": {
     "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}"
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}&access_token={您的access_token}"
+      ]
     }
   }
 }
 ```
 
-##### Cursor
+---
 
-编辑 `.cursor/mcp.json`：
-
-```json
-{
-  "mcpServers": {
-    "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}"
-    }
-  }
-}
-```
-
-##### Claude Desktop
-
-编辑配置文件：
-- macOS：`~/Library/Application Support/Claude/claude_desktop_config.json`
-- Windows：`%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}"
-    }
-  }
-}
-```
+> **说明**：将 `{您的乐享code}` 和 `{您的access_token}` 替换为配置页面中显示的实际值。
 
 ### 使用示例
 
@@ -353,75 +366,88 @@ MCP service supports **2 authentication methods**:
 
 > **Recommendation**: Use Method 1 (OAuth Login) - no session creation needed, fastest and simplest.
 
-#### Step 1: Get MCP Configuration
+#### Quick Start (Recommended OAuth Method)
+
+**Fastest way (only 2 steps):**
 
 1. Log in to Lexiang, then visit [https://lexiangla.com/mcp](https://lexiangla.com/mcp)
-2. The page will display your personalized MCP Server configuration:
+2. Click **"Open in Cursor"** or **"Open in VS Code"** button on the page
+3. Complete authentication in the redirected login page
+
+Configuration will be imported automatically, no manual copy-paste needed!
+
+#### Manual Configuration (Token Method)
+
+If you need to configure manually, follow these steps:
+
+1. Visit [https://lexiangla.com/mcp](https://lexiangla.com/mcp)
+2. Switch to the **"Session Management"** tab
+3. Click **"New Session"** to get your `access_token`
+4. Choose the configuration method based on your client type:
+
+---
+
+##### Cursor / Cline / CodeBuddy Configuration
+
+Edit configuration file (supports Remote URL OAuth):
+
+**Configuration file locations:**
+- Cursor: `.cursor/mcp.json`
+- Cline: `.cline/mcp.json`
+- CodeBuddy: `.codebuddy/mcp.json` or `~/.codebuddy/mcp.json`
 
 ```json
 {
   "mcpServers": {
     "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}"
+      "url": "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}&access_token={your_access_token}"
     }
   }
 }
 ```
 
-> **Note**: `{your_lexiang_code}` is your company's unique identifier. Copy it directly from the configuration page.
+---
 
-#### Step 2: Configure Your AI Client
+##### VS Code Configuration (settings.json)
 
-##### CodeBuddy (Recommended)
+Edit VS Code's `settings.json`:
 
-1. Open CodeBuddy and go to MCP configuration
-2. Add the Lexiang MCP configuration (copied from Step 1)
-3. Click the "Refresh" icon
-4. Complete the **OAuth authorization** in the popup
+```json
+{
+  "mcp": {
+    "servers": {
+      "lexiang": {
+        "url": "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}&access_token={your_access_token}"
+      }
+    }
+  }
+}
+```
 
-Configuration file locations:
-- Project-level: `.codebuddy/mcp.json`
-- Global: `~/.codebuddy/mcp.json`
+---
+
+##### CodeBuddy Plugin / Codebuddy Code Configuration (requires npx)
+
+> ⚠️ CodeBuddy Plugin and Codebuddy Code do not support Remote URL OAuth yet. You need to use `npx mcp-remote` as a bridge. Make sure Node.js is installed.
 
 ```json
 {
   "mcpServers": {
     "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}"
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}&access_token={your_access_token}"
+      ]
     }
   }
 }
 ```
 
-##### Cursor
+---
 
-Edit `.cursor/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}"
-    }
-  }
-}
-```
-
-##### Claude Desktop
-
-Edit the configuration file:
-- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "lexiang": {
-      "url": "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}"
-    }
-  }
-}
-```
+> **Note**: Replace `{your_lexiang_code}` and `{your_access_token}` with the actual values shown on the configuration page.
 
 ### Usage Examples
 
