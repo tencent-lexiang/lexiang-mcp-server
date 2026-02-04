@@ -11,13 +11,13 @@
 
 ### 关于乐享
 
-[腾讯乐享](https://lexiang.tencent.com/) 是**更懂企业的 AI 知识库**，通过 AI 技术激活团队私有知识价值，让知识触手可及。
+[腾讯乐享](https://lexiang.tencent.com/?event_type=link_exchange&event_channel=mcp&event_detail=github) 是**更懂企业的 AI 知识库**，通过 AI 技术激活团队私有知识价值，让知识触手可及。
 
 **核心能力：**
 
-- 🤖 **AI 智能问答**：锁定专属知识域，通过 AI 问答快速找到业务上下文
+- 🤖 **AI 智能问答**：锁定专属知识域，通过 AI 问答快速找下文
 - 📚 **多格式全兼容**：支持文档、音视频、表格、图片等百余种格式
-- 🔗 **多源知识入库**：聚合 Confluence、SharePoint、网盘及本地文件
+- 🔗 **多源知识入库**：聚合 tenConfluence、SharePoint、网盘及本地文件
 - 👥 **轻松协作**：多人在线编辑，任务即时下发，知识与业务紧密关联
 - 🔒 **安全可控**：四级权限管控、防泄露水印、操作可追溯
 
@@ -283,7 +283,7 @@ Lexiang MCP 提供 **38 个工具**，覆盖以下场景：
 
 ### 相关链接
 
-- [乐享官网](https://lexiang.tencent.com/)
+- [乐享官网](https://lexiang.tencent.com/?event_type=link_exchange&event_channel=mcp&event_detail=github)
 - [乐享 MCP 配置页面](https://lexiangla.com/mcp)
 - [MCP 协议规范](https://spec.modelcontextprotocol.io/)
 
@@ -294,7 +294,7 @@ Lexiang MCP 提供 **38 个工具**，覆盖以下场景：
 
 ### About Lexiang
 
-[Tencent Lexiang](https://lexiang.tencent.com/) is an **AI-powered enterprise knowledge base** that activates the value of team knowledge through AI technology, making knowledge accessible at your fingertips.
+[Tencent Lexiang](https://lexiang.tencent.com/?event_type=link_exchange&event_channel=mcp&event_detail=github) is an **AI-powered enterprise knowledge base** that activates the value of team knowledge through AI technology, making knowledge accessible at your fingertips.
 
 **Core Capabilities:**
 
@@ -566,7 +566,7 @@ A: You can explicitly tell AI: "Update the original document instead of creating
 
 ### Related Links
 
-- [Lexiang Official Website](https://lexiang.tencent.com/)
+- [Lexiang Official Website](https://lexiang.tencent.com/?event_type=link_exchange&event_channel=mcp&event_detail=github)
 - [Lexiang MCP Configuration Page](https://lexiangla.com/mcp)
 - [MCP Protocol Specification](https://spec.modelcontextprotocol.io/)
 
