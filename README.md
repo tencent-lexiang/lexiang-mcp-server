@@ -1,8 +1,9 @@
 # Lexiang MCP Server
 
-<p align="center">
+<!-- Logo placeholder - add docs/images/lexiang-logo.png later -->
+<!-- <p align="center">
   <img src="docs/images/lexiang-logo.png" alt="Lexiang MCP Server" width="200"/>
-</p>
+</p> -->
 
 <p align="center">
   <a href="#english">English</a> | <a href="#中文">中文</a>
@@ -17,7 +18,8 @@ This project implements an [MCP server](https://spec.modelcontextprotocol.io/) f
 
 The Lexiang MCP Server enables AI assistants to interact with your Lexiang knowledge bases, allowing you to search, read, create, and manage knowledge content directly through natural language conversations.
 
-![MCP Demo](docs/images/mcp-demo.png)
+<!-- Demo image placeholder - add docs/images/mcp-demo.png later -->
+<!-- ![MCP Demo](docs/images/mcp-demo.png) -->
 
 ### Features
 
@@ -257,7 +259,8 @@ A: Ensure you complete all 3 steps of the upload workflow. Step 2 (HTTP PUT) mus
 
 乐享 MCP Server 使 AI 助手能够与您的乐享知识库进行交互，让您可以通过自然语言对话直接搜索、阅读、创建和管理知识内容。
 
-![MCP 演示](docs/images/mcp-demo.png)
+<!-- Demo image placeholder - add docs/images/mcp-demo.png later -->
+<!-- ![MCP 演示](docs/images/mcp-demo.png) -->
 
 ### 功能特性
 
