@@ -17,7 +17,7 @@
 
 - 🤖 **AI 智能问答**：锁定专属知识域，通过 AI 问答快速找下文
 - 📚 **多格式全兼容**：支持文档、音视频、表格、图片等百余种格式
-- 🔗 **多源知识入库**：聚合 tenConfluence、SharePoint、网盘及本地文件
+- 🔗 **多源知识入库**：聚合微信文件、微信公众号、腾讯会议、腾讯文档及本地文件入库
 - 👥 **轻松协作**：多人在线编辑，任务即时下发，知识与业务紧密关联
 - 🔒 **安全可控**：四级权限管控、防泄露水印、操作可追溯
 
@@ -300,7 +300,7 @@ Lexiang MCP 提供 **38 个工具**，覆盖以下场景：
 
 - 🤖 **AI Q&A**: Lock into your dedicated knowledge domain and quickly find business context through AI
 - 📚 **Multi-format Support**: Supports 100+ formats including documents, audio/video, spreadsheets, and images
-- 🔗 **Multi-source Integration**: Aggregate knowledge from Confluence, SharePoint, cloud drives, and local files
+- 🔗 **Multi-source Integration**: Aggregate WeChat files, WeChat Official Accounts, Tencent Meeting, Tencent Docs, and local files
 - 👥 **Easy Collaboration**: Real-time co-editing, instant task assignment, seamlessly integrated with business workflows
 - 🔒 **Secure & Controllable**: Four-level access control, anti-leak watermarks, auditable operations
 
