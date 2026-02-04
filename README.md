@@ -36,6 +36,23 @@ Lexiang MCP 是乐享提供的 [Model Context Protocol (MCP)](https://modelconte
 
 ### 快速开始
 
+#### 认证方式说明
+
+MCP 服务支持 **2 种认证方式**：
+
+1. **方式 1：OAuth 登录（推荐）** ⭐
+   - 不需要提前创建 token，直接点击"在 Cursor 中打开"或"在 VS Code 中打开"即可
+   - MCP 客户端将重定向到登录页面进行身份验证
+   - 支持浏览器自动跳转登录流程
+   - 适用于：大多数场景，最简便快捷
+
+2. **方式 2：手动配置 Access Token（备选）**
+   - 在"会话管理"标签页创建会话，获取 `access_token`
+   - 在 MCP 接入地址中通过 `access_token` URL 参数传递令牌
+   - 适用于：需要完全控制认证过程或离线场景
+
+> **推荐方案**：使用方式 1（OAuth 登录），无需创建会话，最快最简便。
+
 #### 第一步：获取 MCP 配置信息
 
 1. 登录乐享后，访问 [https://lexiangla.com/mcp](https://lexiangla.com/mcp)
@@ -300,7 +317,7 @@ Lexiang MCP 提供 **38 个工具**，覆盖以下场景：
 
 - 🤖 **AI Q&A**: Lock into your dedicated knowledge domain and quickly find business context through AI
 - 📚 **Multi-format Support**: Supports 100+ formats including documents, audio/video, spreadsheets, and images
-- 🔗 **Multi-source Integration**: Aggregate WeChat files, WeChat Official Account articles, Tencent Meeting, Tencent Docs, and local files
+- 🔗 **Multi-source Integration**: Aggregate WeChat files, WeChat media platform articles, Tencent Meeting, Tencent Docs, and local files
 - 👥 **Easy Collaboration**: Real-time co-editing, instant task assignment, seamlessly integrated with business workflows
 - 🔒 **Secure & Controllable**: Four-level access control, anti-leak watermarks, auditable operations
 
@@ -318,6 +335,23 @@ With Lexiang MCP, you can perform the following in AI conversations:
 - 🎥 **Import Meetings**: Import Tencent Meeting recordings to knowledge bases
 
 ### Quick Start
+
+#### Authentication Methods
+
+MCP service supports **2 authentication methods**:
+
+1. **Method 1: OAuth Login (Recommended)** ⭐
+   - No need to create a token in advance, just click "Open in Cursor" or "Open in VS Code"
+   - MCP client will redirect to the login page for authentication
+   - Supports automatic browser redirect login flow
+   - Best for: Most scenarios, simplest and fastest
+
+2. **Method 2: Manual Access Token Configuration (Alternative)**
+   - Create a session in the "Session Management" tab to get an `access_token`
+   - Pass the token via `access_token` URL parameter in the MCP endpoint
+   - Best for: Scenarios requiring full control over authentication or offline use
+
+> **Recommendation**: Use Method 1 (OAuth Login) - no session creation needed, fastest and simplest.
 
 #### Step 1: Get MCP Configuration
 
