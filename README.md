@@ -1,8 +1,9 @@
-# Lexiang MCP Server
+# Lexiang MCP Server 
+[![MCP Badge](https://lobehub.com/badge/mcp/tencent-lexiang-mcp-server)](https://lobehub.com/mcp/tencent-lexiang-mcp-server)
 
 <!-- Logo placeholder - add docs/images/lexiang-logo.png later -->
 <!-- <p align="center">
-  <img src="docs/images/lexiang-logo.png" alt="Lexiang MCP Server" width="200"/>
+  <img src="https://avatars.githubusercontent.com/u/259243330?s=200&v=4" alt="Lexiang MCP Server" width="200"/>
 </p> -->
 
 <p align="center">
@@ -16,7 +17,7 @@
 
 ### 关于乐享
 
-[腾讯乐享](https://lexiang.tencent.com/) 是**更懂企业的 AI 知识库**，通过 AI 技术激活团队私有知识价值，让知识触手可及。
+[腾讯乐享](https://lexiang.tencent.com/?event_type=link_exchange&event_channel=mcp&event_detail=github) 是**更懂企业的 AI 知识库**，通过 AI 技术激活团队私有知识价值，让知识触手可及。
 
 **核心能力：**
 
@@ -252,7 +253,7 @@ Lexiang MCP 提供 **38 个工具**，覆盖以下场景：
 
 ### About Lexiang
 
-[Tencent Lexiang](https://lexiang.tencent.com/) is an **AI-powered enterprise knowledge base** that activates the value of team knowledge through AI technology, making knowledge accessible at your fingertips.
+[Tencent Lexiang](https://lexiang.tencent.com/?event_type=link_exchange&event_channel=mcp&event_detail=github) is an **AI-powered enterprise knowledge base** that activates the value of team knowledge through AI technology, making knowledge accessible at your fingertips.
 
 **Core Capabilities:**
 
