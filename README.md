@@ -136,6 +136,50 @@ MCP 服务支持 **2 种认证方式**：
 
 > **说明**：将 `{您的乐享code}` 和 `{您的access_token}` 替换为配置页面中显示的实际值。
 
+### 高级配置：工具预设 (Preset)
+
+通过在配置时选择不同的 `preset` 参数，控制 AI 助手可访问的工具类别。不指定时返回所有工具。
+
+#### 支持的 Preset 预设
+
+| Preset | 说明 |
+|--------|------|
+| `knowledge` | 完整知识库工具集（条目、知识库、文件、文档编辑、团队等） |
+| `knowledge.entry` | 知识条目管理（创建、编辑、删除、搜索条目） |
+| `knowledge.space` | 知识库管理（创建知识库、列表管理） |
+| `knowledge.file` | 文件上传下载（支持 PDF、Word、图片等） |
+| `knowledge.block` | 在线文档编辑（创建、更新、删除块结构） |
+| `teamspace.team` | 团队管理（获取团队信息） |
+
+#### 元工具说明
+
+当不指定 `preset` 时，返回以下 4 个元工具用于动态发现和调用其他工具：
+
+- `list_tool_categories` - 列出所有工具分类
+- `search_tools` - 搜索工具
+- `get_tool_schema` - 获取工具参数定义
+- `call_tool` - 调用指定工具
+
+#### 如何使用
+
+1. 使用 OAuth 方式时，直接点击"在 Cursor/VS Code 中打开"即可使用所有工具
+2. 如需限制工具范围，可选择预设后复制配置
+3. 配置将自动包含选定的 `preset` 查询参数
+
+**示例**：仅启用知识条目管理工具
+
+```json
+{
+  "mcpServers": {
+    "lexiang": {
+      "url": "https://mcp.lexiang-app.com/mcp?company_from={您的乐享code}&preset=knowledge.entry"
+    }
+  }
+}
+```
+
+> 💡 选择合适的预设可以让 AI 助手工具列表更简洁，加快响应速度。
+
 ### 使用示例
 
 配置完成后，您可以直接在 AI 对话中操作乐享知识库：
@@ -448,6 +492,50 @@ Edit VS Code's `settings.json`:
 ---
 
 > **Note**: Replace `{your_lexiang_code}` and `{your_access_token}` with the actual values shown on the configuration page.
+
+### Advanced Configuration: Tool Presets
+
+Control which tool categories the AI assistant can access by selecting different `preset` parameters. All tools are returned when not specified.
+
+#### Supported Presets
+
+| Preset | Description |
+|--------|-------------|
+| `knowledge` | Complete knowledge base toolset (entries, spaces, files, document editing, teams, etc.) |
+| `knowledge.entry` | Knowledge entry management (create, edit, delete, search entries) |
+| `knowledge.space` | Knowledge space management (create spaces, list management) |
+| `knowledge.file` | File upload/download (supports PDF, Word, images, etc.) |
+| `knowledge.block` | Online document editing (create, update, delete block structures) |
+| `teamspace.team` | Team management (get team information) |
+
+#### Meta Tools
+
+When `preset` is not specified, the following 4 meta tools are returned for dynamic discovery and invocation:
+
+- `list_tool_categories` - List all tool categories
+- `search_tools` - Search for tools
+- `get_tool_schema` - Get tool parameter definitions
+- `call_tool` - Call a specific tool
+
+#### How to Use
+
+1. With OAuth method, click "Open in Cursor/VS Code" to access all tools
+2. To limit tool scope, select a preset before copying the configuration
+3. The configuration will automatically include the selected `preset` query parameter
+
+**Example**: Enable only knowledge entry management tools
+
+```json
+{
+  "mcpServers": {
+    "lexiang": {
+      "url": "https://mcp.lexiang-app.com/mcp?company_from={your_lexiang_code}&preset=knowledge.entry"
+    }
+  }
+}
+```
+
+> 💡 Choosing the right preset makes the AI assistant's tool list cleaner and improves response speed.
 
 ### Usage Examples
 
