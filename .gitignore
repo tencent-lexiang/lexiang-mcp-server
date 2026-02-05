@@ -32,3 +32,8 @@ build/
 # Temporary
 tmp/
 temp/
+
+# MCP Publisher
+mcp-publisher
+.mcpregistry_github_token
+.mcpregistry_registry_token
